@@ -1,44 +1,43 @@
 package barbosa.souza.de.samuel.guilherme;
 
 public class Conta {
-    // Atributos da classe
-    Cliente cliente; // Composição
-    double saldo;
+    //Atributos
+    Cliente cliente;
     int numero;
+    double saldo;
 
-
-    // Métodos da classe
-    void depositar(double valor) {
-        this.saldo += valor; // Sempre que voce vai falar de um atributo, utilizar this.
+    //Métodos
+    void visualizarSaldo() {
+        System.out.println("Valor do saldo: R$" + this.saldo);
     }
 
     boolean sacar(double valor) {
-        if (valor <= this.saldo) {
+        if( this.saldo >= valor){
             this.saldo -= valor;
             return true;
         }
         return false;
     }
 
-    boolean transferirDinheiro(Conta destino, double valor) {
-        if (this.sacar(valor)) {
+    void depositar(double valor) {
+//        this.saldo = this.saldo + valor;
+        this.saldo += valor;
+    }
+
+    boolean transferirDinheiro(Conta destino, double valor){
+        if(this.sacar(valor)){
             destino.depositar(valor);
             return true;
-        } 
+        }
         return false;
     }
 
-    void visualizarSaldo(String conta) {
-        System.out.println("Saldo atual da conta " + conta + ": R$" + this.saldo);
-    }
-
-    @Override  // _str__() do python
+    @Override
     public String toString() {
         return "Conta{" +
                 "cliente=" + cliente.toString() +
-                ", saldo=" + saldo +
                 ", numero=" + numero +
+                ", saldo=" + saldo +
                 '}';
     }
-
 }

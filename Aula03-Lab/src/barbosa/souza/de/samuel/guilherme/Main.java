@@ -3,59 +3,47 @@ package barbosa.souza.de.samuel.guilherme;
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 5; ++i) System.out.println ();
-        System.out.println("----------------------");
-        System.out.println("Programa inicializado!");
-        System.out.println("----------------------");
-        for (int i = 0; i < 5; ++i) System.out.println ();
-
-        // Cria um objeto do tipo Conta
+        System.out.println("Hawks, você é o cara!");
+        //Cria uma referência para um objeto Conta
         Conta c1;
+        //INstancia um objeto conta
+        c1 = new Conta();
+        c1.cliente = new Cliente();
+        //Manipular os atributos
+        c1.cliente.titular = "Murilo";
+        c1.saldo = 199.99;
+        c1.numero = 1234;
 
-        // Instancia um objeto Conta
-        c1 = new Conta(); // Construtor da classe
+        //Invocar o método visualizarSaldo()
+        c1.visualizarSaldo();
 
-        // Pede para a conta exibir o saldo
-        //c1.visualizarSaldo("c1");
-
-        // Modificar o saldo
-        //c1.saldo = 100;
-        //c1.visualizarSaldo("c1");
-
-        // Cria um novo objeto do tipo Conta
         Conta c2 = new Conta();
-        c2.saldo = 123.0;
+        c2.cliente = new Cliente();
+        c2.saldo = 400;
+        c2.cliente.titular = "Izuku Midoriya";
+        c2.visualizarSaldo();
 
-        c1.depositar(400);
-        c2.depositar(100);
-        
-        /*
-        c1.visualizarSaldo("c1");
-        c2.visualizarSaldo("c2");
-        
-        if(c1.sacar(4000)) {
-            System.out.println("Hoje tem Playstation!!");
+        c1.depositar(100);
+        c1.visualizarSaldo();
+
+        if(c2.sacar(200)){
+            System.out.println("Deu bom!");
         } else {
-            System.out.println("Deu ruim!");
+            System.out.println("Deu Ruim!");
         }
-        c1.visualizarSaldo("c1");
-        */
-        //c1.visualizarSaldo("c1");
-        //c2.visualizarSaldo("c2");
+        c2.visualizarSaldo();
 
-        if(c1.transferirDinheiro(c2, 250)) {
+        if(c1.transferirDinheiro(c2, 500)){
             System.out.println("Transferencia realizada com sucesso!");
         } else {
-            System.out.println("Não foi possível realizar a transferência");
+            System.out.println("Falha ao transferir!");
         }
 
-        c1.cliente = new Cliente();
-        c2.cliente = new Cliente();
+        c1.visualizarSaldo();
+        c2.visualizarSaldo();
 
-        //c1.visualizarSaldo("c1");
-        //c2.visualizarSaldo("c2");
-
-        System.out.println("C1: " + c1.toString());
+        System.out.println("C1:" + c1.toString());
+        System.out.println("C2:" + c2.toString());
 
     }
 }
