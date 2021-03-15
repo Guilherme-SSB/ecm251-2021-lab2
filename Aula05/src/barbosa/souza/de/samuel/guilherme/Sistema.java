@@ -6,19 +6,36 @@ public class Sistema {
     private boolean executarSistema;
     private Scanner scanner;
 
-    public void executar() {
-        int opcao;
-        while (executarSistema) {
-            exibirMenu();
-            opcao = scanner.nextInt();
-        }
-    }
-
     public Sistema() {
         this.executarSistema = true;
         this.scanner = new Scanner(System.in); // Cria um scanner para o teclado (entrada padrão)
     }
 
+    public void executar() {
+        int opcao;
+        while (executarSistema) {
+            exibirMenu();
+            opcao = scanner.nextInt();
+            avaliarOpcao(opcao);
+        }
+    }
+    
+
+    private void avaliarOpcao(int opcao) {
+        switch(opcao) {
+            default:
+                System.out.println("Opção ainda não implementada!");
+                break;
+
+            case 0: 
+                System.out.println("Obrigado por utilizar o sistema!");
+                this.executarSistema = false;
+                break;
+            
+            
+            
+        }
+    }
 
     private void exibirMenu() {
         System.out.println("Bem vindo ao MauaBank!");
