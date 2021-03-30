@@ -1,6 +1,7 @@
 /**
  * 
  *  @author Guilherme Samuel de Souza Barbosa 19.00012-0
+ *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 
  * 
  */
 
@@ -36,7 +37,7 @@ public class Usuario {
         return this.email;
     }
 
-    
+
     // Métodos
     @Override
     public String toString() {
