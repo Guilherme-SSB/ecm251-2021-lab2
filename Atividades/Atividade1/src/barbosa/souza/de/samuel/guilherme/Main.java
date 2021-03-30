@@ -22,15 +22,21 @@ public class Main {
         Conta contaUser3 = new Conta(user3, 3333, 3000.0);
         
 
-        // Operações
-        String qrCode = Transacoes.gerarQrCode(contaUser1, 250);
-        //System.out.println("qrcode gerado:" + qrCode);
-
         // Estado inicial
         System.out.println("Estado inicial:");
         System.out.println("Nome Usuário: " + contaUser1.getUsuario().getNome() + " - Saldo: " + contaUser1.getSaldo());
         System.out.println("Nome Usuário: " + contaUser2.getUsuario().getNome() + " - Saldo: " + contaUser2.getSaldo());
         System.out.println("Nome Usuário: " + contaUser3.getUsuario().getNome() + " - Saldo: " + contaUser3.getSaldo());
+
+
+        // Operações
+        String qrCodeUser1 = Transacoes.gerarQrCode(contaUser1, 250);
+        contaUser2.pagarRequisicao(qrCodeUser1);
+        contaUser3.pagarRequisicao(qrCodeUser1);
+        contaUser2.pagarRequisicao(qrCodeUser1);
+
+        String qrCodeUser2 = Transacoes.gerarQrCode(contaUser2, 250);
+        contaUser3.pagarRequisicao(qrCodeUser2);
 
 
         // Estado final
