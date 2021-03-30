@@ -12,12 +12,14 @@ public class Conta {
     private Usuario usuario;
     private int idConta;
     private double saldo;
+    private static int numContas = 0;
 
 
     // Construtor
-    public Conta(Usuario usuario, int idConta, double saldo) {
+    public Conta(Usuario usuario, double saldo) {
+        numContas += 1;
         this.usuario = usuario;
-        this.idConta = idConta;
+        this.idConta = numContas;
         this.saldo = saldo;
     }
 
@@ -45,15 +47,9 @@ public class Conta {
         conta.saldo -= valor;
     }
 
+    public String getInformacoes() {
+        return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo());
 
-    @Override
-    public String toString() {
-        return "{" +
-            " usuario='" + getUsuario() + "'" +
-            ", idConta='" + getIdConta() + "'" +
-            ", saldo='" + getSaldo() + "'" +
-            "}";
-    }
-
-    
+        return String.format("Conta: {idConta: %s, saldo: %s}", this.idConta, this.saldo);
+    }    
 }
