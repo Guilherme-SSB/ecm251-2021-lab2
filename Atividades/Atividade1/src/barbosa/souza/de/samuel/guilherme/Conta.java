@@ -1,7 +1,7 @@
 /**
  * 
  *  @author Guilherme Samuel de Souza Barbosa 19.00012-0 <gui.samuel10@gmail.com>
- *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 <gustavoconsoleti@gmail.com>
+ *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 <gugacon@hotmail.com>
  * 
  */
 
@@ -31,18 +31,12 @@ public class Conta {
         return this.idConta;
     }
 
-
     public double getSaldo() {
         return this.saldo;
     }
 
     
     // Métodos
-    public boolean pagarRequisicao(String qrCode) {
-        //5;PERIGO;1;1234”
-        return false;
-    }
-
     @Override
     public String toString() {
         return "{" +

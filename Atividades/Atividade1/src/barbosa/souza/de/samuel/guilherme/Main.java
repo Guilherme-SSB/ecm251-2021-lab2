@@ -1,12 +1,11 @@
 /**
  * 
  *  @author Guilherme Samuel de Souza Barbosa 19.00012-0 <gui.samuel10@gmail.com>
- *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 <gustavoconsoleti@gmail.com>
+ *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 <gugacon@hotmail.com>
  * 
  */
 
 package barbosa.souza.de.samuel.guilherme;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -32,10 +31,12 @@ public class Main {
 
         // Operações de teste
         // Usuário 1 gera uma operação de recebimento de 250;
-
+        String qrCodeUser1 = Transacoes.gerarQrCode(contaUser1, 250);
+        // Usuário 2 paga a requisição do usuário 1;
+        Transacoes.pagarRequisicao(qrCodeUser1);
 
         // Estado Final
-        System.out.println("\n\n\nEstado Final: ");
+        System.out.println("\nEstado Final: ");
         System.out.println("Nome Usuário: " + user1.getNome() + " - Saldo: " + contaUser1.getSaldo());
         System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + contaUser2.getSaldo());
         System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + contaUser3.getSaldo());
