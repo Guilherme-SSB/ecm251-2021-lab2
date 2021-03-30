@@ -41,17 +41,8 @@ public class Usuario {
         return this.conta;
     }
 
-    // Métodos
-    
-
-
-
-    @Override
-    public String toString() {
-        return "{" +
-            " nome='" + getNome() + "'" +
-            ", senha='" + getSenha() + "'" +
-            ", email='" + getEmail() + "'" +
-            "}";
+    // Métodos    
+    public String getInformacoes() {
+        return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo());
     }
 }
