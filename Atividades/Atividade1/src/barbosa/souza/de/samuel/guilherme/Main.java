@@ -33,7 +33,7 @@ public class Main {
         // Usuário 1 gera uma operação de recebimento de 250;
         String qrCodeUser1 = Transacoes.gerarQrCode(contaUser1, 250);
         // Usuário 2 paga a requisição do usuário 1;
-        Transacoes.pagarRequisicao(qrCodeUser1);
+        // Transacoes.pagarRequisicao();
 
         // Estado Final
         System.out.println("\nEstado Final: ");

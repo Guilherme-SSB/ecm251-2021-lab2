@@ -13,6 +13,7 @@ public class Usuario {
     private String nome;
     private String senha;
     private String email;
+    private Conta conta;
 
 
     // Construtor
@@ -36,8 +37,15 @@ public class Usuario {
         return this.email;
     }
 
+    public Conta getConta() {
+        return this.conta;
+    }
 
     // Métodos
+    
+
+
+
     @Override
     public String toString() {
         return "{" +

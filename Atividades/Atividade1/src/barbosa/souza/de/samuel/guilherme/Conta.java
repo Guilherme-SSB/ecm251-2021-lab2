@@ -37,6 +37,15 @@ public class Conta {
 
     
     // Métodos
+    public static void receber(Conta conta, double valor){
+        conta.saldo += valor;
+    }
+
+    public static void pagar(Conta conta, double valor){
+        conta.saldo -= valor;
+    }
+
+
     @Override
     public String toString() {
         return "{" +

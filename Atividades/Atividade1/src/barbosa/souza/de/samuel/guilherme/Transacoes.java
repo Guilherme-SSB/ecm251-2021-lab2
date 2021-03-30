@@ -7,6 +7,7 @@
 package barbosa.souza.de.samuel.guilherme;
 
 import java.util.Random;
+
 public class Transacoes {  
 
     // Métodos
@@ -20,9 +21,13 @@ public class Transacoes {
         return qrCode;
     }
 
-    public static boolean pagarRequisicao(String qrCode) {
-        //5;PERIGO;1;1234”
+    public static boolean pagarRequisicao(Usuario pagador, Usuario recebedor, double valor) {
+        if (pagador.getConta().getSaldo() >= valor) {
+            Conta.pagar(pagador.getConta(), valor);
+            Conta.receber(recebedor.getConta(), valor);
+            return true;
+        } 
         return false;
+        
     }
-
 }
