@@ -7,22 +7,11 @@
 
 package barbosa.souza.de.samuel.guilherme;
 
-import java.util.Random;
 
 public class Transacoes {
-
-
-    // Métodos
-    private static int getRandomNumberInRange(int min, int max) {
-        Random r = new Random();
-        return r.nextInt((max - min) + 1) + min;
-    }
+    //atributos
     
-    public static String gerarQrCode(Conta destinatario, double valor) {
-        // "id da conta do destinatorio; nome de usuario do destinatario; valor; getRandomNumberInRange(1000, 9999)"
-        String qrcode = (destinatario.getIdConta() + ";") + (destinatario.getUsuario().getNome() + ";") + (valor + ";") + (getRandomNumberInRange(1000, 9000) + "");
 
-        return qrcode;
-    }
 
+    
 }

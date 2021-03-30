@@ -7,14 +7,13 @@
 
 package barbosa.souza.de.samuel.guilherme;
 
+
 public class Usuario {
-
-
     // Atributos
     private String nome;
     private String senha;
     private String email;
-    
+
 
     // Construtor
     public Usuario(String nome, String senha, String email) {
@@ -22,7 +21,7 @@ public class Usuario {
         this.senha = senha;
         this.email = email;
     }
-
+    
 
     // Getters
     public String getNome() {
@@ -41,11 +40,10 @@ public class Usuario {
     // Métodos
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "{" +
             " nome='" + getNome() + "'" +
             ", senha='" + getSenha() + "'" +
             ", email='" + getEmail() + "'" +
             "}";
     }
-
 }
