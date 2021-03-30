@@ -11,7 +11,6 @@ package barbosa.souza.de.samuel.guilherme;
 public class Main {
     public static void main(String[] args) {
 
-
         // Criar usuários de teste
         Usuario user1 = new Usuario("All Might", "123", "allmight@maua.br");
         Usuario user2 = new Usuario("One For All", "456", "oneforall@maua.br");
@@ -30,7 +29,10 @@ public class Main {
         System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + contaUser2.getSaldo());
         System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + contaUser3.getSaldo());
 
+
         // Operações de teste
+        // Usuário 1 gera uma operação de recebimento de 250;
+
 
         // Estado Final
         System.out.println("\n\n\nEstado Final: ");

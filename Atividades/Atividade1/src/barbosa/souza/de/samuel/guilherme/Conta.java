@@ -39,6 +39,7 @@ public class Conta {
     
     // Métodos
     public boolean pagarRequisicao(String qrCode) {
+        //5;PERIGO;1;1234”
         return false;
     }
 

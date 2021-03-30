@@ -6,16 +6,17 @@
  */
 package barbosa.souza.de.samuel.guilherme;
 
-
-public class Transacoes {
-    // Atributos
-    
+import java.util.Random;
+public class Transacoes {  
 
     // Métodos
     private static int getRandomNumberInRange(int min, int max) {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
-        }
+    }
         
-    
+    public static String gerarQrCode(Conta destinatario, double valor) {
+        String qrCode = (destinatario.getIdConta() + ";") + (destinatario.getUsuario().getNome() + ";") + (valor + ";") + (getRandomNumberInRange(1000, 9999) + "");
+        return qrCode;
+    }
 }
