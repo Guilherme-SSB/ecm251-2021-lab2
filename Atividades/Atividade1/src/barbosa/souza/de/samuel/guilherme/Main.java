@@ -87,9 +87,12 @@ public class Main {
 
         // Operações de teste
             // Usuário 1 gera uma operação de recebimento de 250;
-            //String qrCodeUser1 = Transacoes.gerarQrCode(contaUser1, 250);
             // Usuário 2 paga a requisição do usuário 1;
-            // Transacoes.pagarRequisicao();
+            // Usuário 3 paga a requisição do usuário 1;
+            // Usuário 2 paga a requisição do usuário 1;
+            // Usuário 2 gera uma operação de recebimento de 1000;
+            // Usuário 3 paga a requisição do usuário 2.
+        
 
 
         // Estado Final

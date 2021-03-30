@@ -43,6 +43,7 @@ public class Usuario {
 
     // Métodos    
     public String getInformacoes() {
-        return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo());
+        //return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo()); // PROBLEMA!!! this.conta.getSaldo()
+        return String.format("Nome Usuário: %s - Saldo: ", this.nome); // PROBLEMA!!! this.conta.getSaldo()
     }
 }

@@ -48,8 +48,6 @@ public class Conta {
     }
 
     public String getInformacoes() {
-        return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo());
-
         return String.format("Conta: {idConta: %s, saldo: %s}", this.idConta, this.saldo);
     }    
 }
