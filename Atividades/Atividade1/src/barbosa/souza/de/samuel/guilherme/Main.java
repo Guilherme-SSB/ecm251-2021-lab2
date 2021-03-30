@@ -23,7 +23,8 @@ public class Main {
         
 
         // Operações
-        
+        String qrCode = Transacoes.gerarQrCode(contaUser1, 250);
+        //System.out.println("qrcode gerado:" + qrCode);
 
         // Estado inicial
         System.out.println("Estado inicial:");

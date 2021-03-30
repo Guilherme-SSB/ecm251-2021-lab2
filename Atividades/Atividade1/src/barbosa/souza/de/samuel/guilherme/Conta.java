@@ -38,7 +38,11 @@ public class Conta {
 
     // Métodos
     public boolean pagarRequisicao(String qrCode) { //TODO
-        return true;
+        // qrCode será do tipo "5;PERIGO;1;1234"
+        // 1. Separar String qrCode a cada ';'
+        // 2. 
+
+        return false;
     }
     
 
