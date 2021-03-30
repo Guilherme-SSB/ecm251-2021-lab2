@@ -1,12 +1,12 @@
 /**
  * 
  *  @author Guilherme Samuel de Souza Barbosa 19.00012-0
+ *  @author Gustavo Consoleti Ramirez de Souza 19.00715-9 
  * 
  */
 
 package barbosa.souza.de.samuel.guilherme;
 
-import java.beans.DesignMode;
 import java.util.Random;
 
 public class Transacoes {
@@ -18,10 +18,8 @@ public class Transacoes {
         return r.nextInt((max - min) + 1) + min;
     }
     
-    public static String gerarQrCode(Conta destinatario, double valor) { // TODO
+    public static String gerarQrCode(Conta destinatario, double valor) {
         // "id da conta do destinatorio; nome de usuario do destinatario; valor; getRandomNumberInRange(1000, 9999)"
-        // "5;PERIGO;1;1234"
-
         String qrcode = (destinatario.getIdConta() + ";") + (destinatario.getUsuario().getNome() + ";") + (valor + ";") + (getRandomNumberInRange(1000, 9000) + "");
 
         return qrcode;
