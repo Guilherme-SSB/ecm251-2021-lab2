@@ -7,8 +7,9 @@
 
 package barbosa.souza.de.samuel.guilherme;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -16,90 +17,40 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Usuario> listaDeUsuarios = new ArrayList<>();
 
-        String nome;
-        String senha;
-        String email;
 
-        // Criar usuários de teste
-        // Usuario user1 = new Usuario("All Might", "123", "allmight@maua.br");
-        // Usuario user2 = new Usuario("One For All", "456", "oneforall@maua.br");
-        // Usuario user3 = new Usuario("Bakugo", "789", "bakugo@maua.br");
-
-        
-        // Criar conta para cada usuário
-        // Conta contaUser1 = new Conta(user1, 1, 1000.0);
-        // Conta contaUser2 = new Conta(user2, 2, 250.0);
-        // Conta contaUser3 = new Conta(user3, 3, 3000.0);
-        
-
-        // Cadastro e abertura de conta do usuário 1
-        System.out.println("Informe o nome do usuário 1:");
-        nome = scanner.nextLine();
-
-        System.out.println("Informe a senha do usuário 1:");
-        senha = scanner.nextLine();
-
-        System.out.println("Informe o email do usuário 1:");
-        email = scanner.nextLine();
-
-        Usuario user1 = new Usuario(nome, senha, email);
+        //Criar usuários de teste
+        Usuario user1 = new Usuario("All Might", "123", "allmight@maua.br");
         listaDeUsuarios.add(user1);
-        Conta contaUser1 = new Conta(user1, 1000.0);
-    
-
-        // Cadastro e abertura de conta do usuário 2
-        System.out.println("\n\nInforme o nome do usuário 2:");
-        nome = scanner.nextLine();
-
-        System.out.println("Informe a senha do usuário 2:");
-        senha = scanner.nextLine();
-
-        System.out.println("Informe o email do usuário 2:");
-        email = scanner.nextLine();
-
-        Usuario user2 = new Usuario(nome, senha, email);
+        Usuario user2 = new Usuario("One For All", "456", "oneforall@maua.br");
         listaDeUsuarios.add(user2);
-        Conta contaUser2 = new Conta(user2, 250.0);
-        
-
-        // Cadastro e abertura de conta do usuário 3
-        System.out.println("\n\nInforme o nome do usuário 3:");
-        nome = scanner.nextLine();
-
-        System.out.println("Informe a senha do usuário 3:");
-        senha = scanner.nextLine();
-
-        System.out.println("Informe o email do usuário 3:");
-        email = scanner.nextLine();
-
-        Usuario user3 = new Usuario(nome, senha, email);
+        Usuario user3 = new Usuario("Bakugo", "789", "bakugo@maua.br");
         listaDeUsuarios.add(user3);
-        Conta contaUser3 = new Conta(user3, 3000.0);
+
         
-        exibirEstados(listaDeUsuarios);
+        user1.abrirConta(1000.0);
+        user2.abrirConta(250.0);
+        user3.abrirConta(3000.0);
+
+        //exibirEstados(listaDeUsuarios);
         
         // Estado Inicial
-        // System.out.println("\n\n\nEstado Inicial: ");
-        // System.out.println("Nome Usuário: " + user1.getNome() + " - Saldo: " + contaUser1.getSaldo());
-        // System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + contaUser2.getSaldo());
-        // System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + contaUser3.getSaldo());
+        System.out.println("\n\n\nEstado Inicial: ");
+        System.out.println("Nome Usuário: " + user1.getNome() + " - Saldo: " + user1.getConta().getSaldo());
+        System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + user2.getConta().getSaldo());
+        System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + user3.getConta().getSaldo());
 
 
         // Operações de teste
-            // Usuário 1 gera uma operação de recebimento de 250;
-            // Usuário 2 paga a requisição do usuário 1;
-            // Usuário 3 paga a requisição do usuário 1;
-            // Usuário 2 paga a requisição do usuário 1;
-            // Usuário 2 gera uma operação de recebimento de 1000;
-            // Usuário 3 paga a requisição do usuário 2.
-        
+        user1.gerarRequisicao(250.0);
 
+        
+        //exibirEstados(listaDeUsuarios);
 
         // Estado Final
-        // System.out.println("\nEstado Final: ");
-        // System.out.println("Nome Usuário: " + user1.getNome() + " - Saldo: " + contaUser1.getSaldo());
-        // System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + contaUser2.getSaldo());
-        // System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + contaUser3.getSaldo());
+        System.out.println("\nEstado Final: ");
+        System.out.println("Nome Usuário: " + user1.getNome() + " - Saldo: " + user1.getConta().getSaldo());
+        System.out.println("Nome Usuário: " + user2.getNome() + " - Saldo: " + user2.getConta().getSaldo());
+        System.out.println("Nome Usuário: " + user3.getNome() + " - Saldo: " + user3.getConta().getSaldo());
 
         scanner.close();
        
@@ -110,5 +61,4 @@ public class Main {
             System.out.println(usuario.getInformacoes()); 
         }
     }
-
 }
