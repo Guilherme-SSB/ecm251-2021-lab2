@@ -16,8 +16,8 @@ public class Transacoes {
         return r.nextInt((max - min) + 1) + min;
     }
         
-    public static String getQRCode(Conta destinatario, double valor) {
-        String qrCode = (destinatario.getIdConta() + ";") + (destinatario.getUsuario().getNome() + ";") + (valor + ";") + (getRandomNumberInRange(1000, 9999) + "");
+    public static String getQRCode(int idConta, String nome, double valor) {
+        String qrCode = (idConta + ";" + nome + ";" + valor + ";" + getRandomNumberInRange(1000, 9999));
         return qrCode;
     }
 
