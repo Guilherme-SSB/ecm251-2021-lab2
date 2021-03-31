@@ -14,7 +14,7 @@ public class Usuario {
     private String senha;
     private String email;
     private Conta conta;
-
+    
 
     // Construtor
     public Usuario(String nome, String senha, String email) {
@@ -41,9 +41,21 @@ public class Usuario {
         return this.conta;
     }
 
+    public void gerarRequisicao(double valor) {
+        //1;All Might;250.0;9665
+        String qrCodeUser1 = Transacoes.getQRCode(this.conta.getIdConta(), this.nome, valor);
+        System.out.println(qrCodeUser1);
+        
+
+    }
+
+    public void abrirConta(double saldo) {
+        this.conta = new Conta(saldo);
+    }
+
     // Métodos    
     public String getInformacoes() {
-        //return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo()); // PROBLEMA!!! this.conta.getSaldo()
-        return String.format("Nome Usuário: %s - Saldo: ", this.nome); // PROBLEMA!!! this.conta.getSaldo()
-    }
+        // return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo()); // PROBLEMA!!! this.conta.getSaldo()
+        return String.format("Nome Usuário: %s - Saldo: ", this.nome);
+    }   
 }
