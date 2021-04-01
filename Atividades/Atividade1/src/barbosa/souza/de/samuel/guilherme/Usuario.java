@@ -41,21 +41,27 @@ public class Usuario {
         return this.conta;
     }
 
-    public void gerarRequisicao(double valor) {
-        //1;All Might;250.0;9665
-        String qrCodeUser1 = Transacoes.getQRCode(this.conta.getIdConta(), this.nome, valor);
-        System.out.println(qrCodeUser1);
-        
+    public String gerarRequisicao(double valor) { //Retorna: 1;All Might;250.0;9665
+        this.conta.gerarQRCode(this.nome, valor);
+        String qrCodeUser = Transacoes.pegarQRcode(this.conta.getIdConta(), this.nome, valor);
+        return qrCodeUser;       
+    }
 
+
+    public void pagarUsuario(Usuario user) {
+        String[] dados = user.conta.getQrCode().split(";");
+        double valorDaConta = Double.parseDouble(dados[2]);
+
+        if (Transacoes.pagarRequisicao(this, user, valorDaConta)){
+            System.out.println("Transação realizada com sucesso!");
+
+        } else {
+            System.out.println("Saldo insuficiente! Transação foi cancelada.");
+        }
     }
 
     public void abrirConta(double saldo) {
         this.conta = new Conta(saldo);
     }
 
-    // Métodos    
-    public String getInformacoes() {
-        // return String.format("Nome Usuário: %s - Saldo: %s", this.nome, this.conta.getSaldo()); // PROBLEMA!!! this.conta.getSaldo()
-        return String.format("Nome Usuário: %s - Saldo: ", this.nome);
-    }   
 }

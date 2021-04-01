@@ -16,10 +16,11 @@ public class Transacoes {
         return r.nextInt((max - min) + 1) + min;
     }
         
-    public static String getQRCode(int idConta, String nome, double valor) {
+    public static String pegarQRcode(int idConta, String nome, double valor) {
         String qrCode = (idConta + ";" + nome + ";" + valor + ";" + getRandomNumberInRange(1000, 9999));
         return qrCode;
     }
+
 
     public static boolean pagarRequisicao(Usuario pagador, Usuario recebedor, double valor) {
         if (pagador.getConta().getSaldo() >= valor) {
@@ -28,6 +29,5 @@ public class Transacoes {
             return true;
         } 
         return false;
-        
     }
 }

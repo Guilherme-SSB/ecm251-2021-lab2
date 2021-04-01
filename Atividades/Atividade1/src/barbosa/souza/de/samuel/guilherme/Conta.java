@@ -12,6 +12,7 @@ public class Conta {
     private int idConta;
     private double saldo;
     private static int numContas = 0;
+    private String qrCode;
 
 
     // Construtor
@@ -29,6 +30,15 @@ public class Conta {
         return this.saldo;
     }
 
+    public String getQrCode() {
+        return this.qrCode;
+    }
+    
+
+    public void gerarQRCode(String nome, double valor) {
+        this.qrCode = Transacoes.pegarQRcode(this.idConta, nome, valor);
+    }
+    
     
     // Métodos
     public static void receber(Conta conta, double valor) {
