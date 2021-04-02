@@ -41,16 +41,16 @@ public class Usuario {
         return this.conta;
     }
 
-    public String gerarRequisicao(double valor) { //Retorna: 1;All Might;250.0;9665
-        this.conta.gerarQRCode(this.nome, valor);
+    public String gerarRequisicao(double valor) {                   // Esse é o método que o usuário irá chamar para gerar a requisição com um determinado valor
+        this.conta.gerarQRCode(this.nome, valor);                   // "Marcar" na conta o usuario que fez a requisição a string do QRCode
         String qrCodeUser = Transacoes.pegarQRcode(this.conta.getIdConta(), this.nome, valor);
-        return qrCodeUser;       
+        return qrCodeUser;                                          // Retorna a string do QRCode que foi gerada pela requisição
     }
 
 
-    public void pagarUsuario(Usuario user) {
-        String[] dados = user.conta.getQrCode().split(";");
-        double valorDaConta = Double.parseDouble(dados[2]);
+    public void pagarUsuario(Usuario user) {                        // Esse é o método que o usuário irá chamar para pagar a requisição feita por outro usuário
+        String[] dados = user.conta.getQrCode().split(";");         // A string `dados` contém o QRCode que foi "marcado" na conta do usuário
+        double valorDaConta = Double.parseDouble(dados[2]);         // Processamento da string `dados` a fim de obter apenas o valor a ser pago
 
         if (Transacoes.pagarRequisicao(this, user, valorDaConta)){
             System.out.println("Transação realizada com sucesso!");
@@ -62,6 +62,16 @@ public class Usuario {
 
     public void abrirConta(double saldo) {
         this.conta = new Conta(saldo);
+    }
+
+    @Override                                                      // Retorna uma String formada com informações da Usuario
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            ", senha='" + getSenha() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", conta='" + getConta() + "'" +
+            "}";
     }
 
 }

@@ -11,18 +11,19 @@ import java.util.Random;
 public class Transacoes {  
 
     // Métodos
-    private static int getRandomNumberInRange(int min, int max) {
+    private static int getRandomNumberInRange(int min, int max) {                       // Método utilizado para gerar um número inteiro aleatório
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
     }
         
-    public static String pegarQRcode(int idConta, String nome, double valor) {
+    public static String pegarQRcode(int idConta, String nome, double valor) {          // Método utiizado pelo gerar a string do QRCode
         String qrCode = (idConta + ";" + nome + ";" + valor + ";" + getRandomNumberInRange(1000, 9999));
         return qrCode;
     }
 
 
-    public static boolean pagarRequisicao(Usuario pagador, Usuario recebedor, double valor) {
+    public static boolean pagarRequisicao(Usuario pagador, Usuario recebedor, double valor) {   // Método utilizado pelo pagarUsuario para realizar a 
+                                                                                                //transação entre duas contas
         if (pagador.getConta().getSaldo() >= valor) {
             Conta.pagar(pagador.getConta(), valor);
             Conta.receber(recebedor.getConta(), valor);
@@ -30,4 +31,6 @@ public class Transacoes {
         } 
         return false;
     }
+
+    // Transacoes não possui um método toString() pois não possui atributos
 }
