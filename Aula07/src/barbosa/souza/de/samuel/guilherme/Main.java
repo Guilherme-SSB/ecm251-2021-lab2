@@ -1,14 +1,11 @@
 package barbosa.souza.de.samuel.guilherme;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("");
+        }
         
-        Ninja ninja = new Ninja("Naruto", "Uzumaki");
-        System.out.println(ninja.apresentacao());
-
-        Genin genin = new Genin("Sakura", "Haruno", "Atrapalhar o rolê");
-        System.out.println(genin.apresentacao());
-        System.out.println("Missão: " + genin.getMissao());
-
+        System.out.println("Salve!");
     }
 }
