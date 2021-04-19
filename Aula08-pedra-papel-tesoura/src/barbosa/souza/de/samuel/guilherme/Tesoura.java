@@ -1,5 +1,5 @@
 package barbosa.souza.de.samuel.guilherme;
 
-public class Tesoura {
+public class Tesoura extends Jogada{
     
 }
