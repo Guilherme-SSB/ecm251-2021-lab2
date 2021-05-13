@@ -1,6 +1,5 @@
 package barbosa.souza.de.samuel.guilherme;
 
-
 public class Jogador {
     private String nome;
     private boolean ehHumano;
