@@ -1,8 +1,10 @@
 package barbosa.guilherme.t2.models;
 
 import barbosa.guilherme.t2.enums.Funcoes;
+import barbosa.guilherme.t2.interfaces.Apresentacao;
+import barbosa.guilherme.t2.interfaces.PostarMensagem;
 
-public abstract class Membro {
+public abstract class Membro implements PostarMensagem, Apresentacao{
     
     /**
      * Atributos da classe
@@ -81,5 +83,5 @@ public abstract class Membro {
     @Override
     public String toString() {
         return "Membro [email=" + email + ", funcao=" + funcao + ", nome=" + nome + "]";
-    }  
+    }
 }
