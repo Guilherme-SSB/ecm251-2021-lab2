@@ -1,32 +1,34 @@
-package barbosa.guilherme.t2.models;
+package consoleti.gustavo.t2.models;
 
-import barbosa.guilherme.t2.enums.Funcoes;
-import barbosa.guilherme.t2.interfaces.Apresentacao;
-import barbosa.guilherme.t2.interfaces.PostarMensagem;
+import consoleti.gustavo.t2.Interfaces.IApresentacao;
+import consoleti.gustavo.t2.Interfaces.IPostarMensagem;
+import consoleti.gustavo.t2.enums.Funcoes;
 
-public abstract class Membro implements PostarMensagem, Apresentacao{
-    
+public abstract class Membros implements IApresentacao, IPostarMensagem {
+
     /**
-     * Atributos da classe
+     * Atributos da classe.
      */
     private String email;
     private String nome;
     private Funcoes funcao;
 
     /**
-     * Construtor dos atributos da classe Membro
+     * Construtor dos atributos da classe Membro.
+     * 
      * @param email
      * @param nome
      * @param funcao
      */
-    public Membro(String email, String nome, Funcoes funcao) {
+    public Membros(String email, String nome, Funcoes funcao) {
         this.email = email;
         this.nome = nome;
         this.funcao = funcao;
     }
 
     /**
-     * Getter do email do membro
+     * Getter do email do membro.
+     * 
      * @return String
      */
     public String getEmail() {
@@ -35,6 +37,7 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
 
     /**
      * Setter do email do membro
+     * 
      * @param email
      * @return String
      */
@@ -44,6 +47,7 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
 
     /**
      * Getter do nome do membro
+     * 
      * @return String
      */
     public String getNome() {
@@ -52,6 +56,7 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
 
     /**
      * Setter do nome do membro
+     * 
      * @param nome
      * @return String
      */
@@ -61,6 +66,7 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
 
     /**
      * Getter do funcao do membro
+     * 
      * @return Funcoes
      */
     public Funcoes getFuncao() {
@@ -69,6 +75,7 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
 
     /**
      * Setter da funcao do membro
+     * 
      * @param funcao
      * @return Funcoes
      */
@@ -77,11 +84,12 @@ public abstract class Membro implements PostarMensagem, Apresentacao{
     }
 
     /**
-     * Printa os atributos do membro
+     * Exibe os atributos do membro
+     * 
      * @return String
      */
     @Override
     public String toString() {
-        return "Membro [email=" + email + ", funcao=" + funcao + ", nome=" + nome + "]";
+        return "Membro {Nome = " + nome + ", Função = " + funcao + ", E-mail = " + email + "}";
     }
 }
