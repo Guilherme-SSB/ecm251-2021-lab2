@@ -2,6 +2,6 @@ package br.maua.teste;
 
 public class Yes {
     static public String printarPalavraLegal () {
-        return "Yes";
+        return "\nYes";
     }
 }
