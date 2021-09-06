@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="039789f4-d070-4e77-92ec-ba671eb6ef60" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/controller/DeckController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Card.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Deck.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/HttpService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Aula17.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Aula17.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pegarBaralho.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/pegarBaralho.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pegarBaralho.kt" beforeDir="false" />
     </list>
@@ -24,11 +26,20 @@
       <list>
         <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -251,22 +262,7 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main.kt</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pegarBaralho.kt</url>
-          <line>9</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/main.kt">
